@@ -1,0 +1,117 @@
+ <section class="hero is-dark is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-size-6">
+      </h1>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-7">
+        <div class="card">
+          <div class="card-image">
+          　<%= attachment_image_tag @recipe, :image %>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4"><%= @recipe.title %></p>
+              </div>
+            </div>
+            <div class="content">
+              <table class="table is-narrow">
+                <tr>
+                  <th>説明</th>
+                </tr>
+                <tr>
+                  <td><%= simple_format @recipe.body %></td>
+                </tr>
+                <tr>
+                <br>
+                　<th>Bestsong</th>
+                </tr>
+                <tr>
+                  <td><%= simple_format @recipe.bestsong %></td>
+                </tr>
+                <tr>
+                <br>
+                　<th>Bestsong BPM</th>
+                </tr>
+                <tr>
+                  <td><%= simple_format @recipe.bpm %></td>
+                </tr>
+                <tr>
+                <br>
+                　<th>Genre</th>
+                </tr>
+                <tr>
+                  <% if @recipe.Genre == "1" %>
+                　   <td>Soul</td>  
+                　<% elsif @recipe.Genre == "2" %>
+                　   <td>Funk</td>  
+                　<% elsif @recipe.Genre == "3" %>
+                　   <td>Dub</td>  
+                　<% elsif @recipe.Genre == "4" %>
+                　   <td>R&B</td>  
+                　<% elsif @recipe.Genre == "5" %>
+                　   <td>Citypop</td>  
+                　<% end %>
+                </tr>
+              </table>
+              <% if @recipe.user.id == current_user.id %>
+                <%= link_to "編集画面へ", edit_recipe_path(@recipe), class: "button is-success" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="column is-4">
+        <article class="panel is-link">
+          <p class="panel-heading">
+            By <%= @recipe.user.username %>
+          </p>
+          <div class="panel-block">
+            <p class="control">
+              <%= @recipe.user.profile %>
+            </p>
+          </div>
+          <%= link_to user_path(@recipe.user), class: "panel-block" do %>
+            <span class="panel-icon">
+              <i class="fas fa-user" aria-hidden="true"></i>
+            </span>
+            <%= @recipe.user.username %> さんのページへ
+          <% end %>
+          <br>
+          <br>
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+               <p><strong><%= @recipe.user.username %> </strong><br>
+                  <%= form_for [@recipe, @comment] do |f| %>
+                  <div>
+                    <%= f.text_area :comment_content %>
+                    <%= f.hidden_field :recipe_id, value: @recipe.id %>
+                  </div><br>
+                  <%= f.submit 'コメントする' %>
+                  <% end %>
+               </p>
+             </div>
+             <h2>コメント一覧</h2>
+             <% @comments.each do |comment| %>
+             <div>
+             <%= @recipe.user.username %>：<%= comment.comment_content %>
+             <hr>
+             </div>
+             <% end %>
+             </article>
+            </div>
+          </article>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
