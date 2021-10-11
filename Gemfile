@@ -6,12 +6,14 @@ ruby '2.6.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 # 開発・テスト環境ではSQLite3を使う
+group :development, :test do
   gem 'sqlite3'
+end
 
 # 本番環境ではPostgresqlを使う
-#group :production do
- # gem 'pg'
-#end
+group :production do
+  gem 'pg'
+end
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -73,5 +75,3 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem "bulma-rails"
-
-gem "aws-sdk-s3", require: false 

@@ -162,6 +162,9 @@ GEM
     nokogiri (1.11.7-x86-mingw32)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.2.3)
+    pg (1.2.3-x64-mingw32)
+    pg (1.2.3-x86-mingw32)
     public_suffix (4.0.6)
     puma (3.12.6)
     puma (3.12.6-java)
@@ -267,10 +270,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.13)
-    sqlite3 (1.3.13-x64-mingw32)
-    sqlite3 (1.3.13-x86-mingw32)
-    sqlite3 (1.3.13-x86-mswin32-60)
+    sqlite3 (1.4.2)
     thor (1.1.0)
     thread_safe (0.3.6)
     thread_safe (0.3.6-java)
@@ -323,6 +323,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  pg
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.1)
   refile!
