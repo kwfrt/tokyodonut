@@ -14,7 +14,10 @@
       <div class="column is-7">
         <div class="card">
           <div class="card-image">
-          　<%= attachment_image_tag @recipe, :image %>
+          　<%#<%= attachment_image_tag @recipe, :image %>
+          　<% if @recipe.photo.attached? %>
+              <%= image_tag @recipe.photo %>
+            <% end %>
           </div>
           <div class="card-content">
             <div class="media">

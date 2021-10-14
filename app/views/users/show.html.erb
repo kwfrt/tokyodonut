@@ -60,7 +60,10 @@
             <div class="card-image">
               <figure class="image is-4by3">
                 <%= link_to recipe_path(recipe) do %>
-                  <%= attachment_image_tag recipe, :image, fallback: "no-image.png" %>
+                  <%#<%= attachment_image_tag recipe, :image, fallback: "no-image.png" %>
+                  <% if recipe.photo.attached? %>
+                    <%= image_tag recipe.photo %>
+                  <% end %>
                 <% end %>
               </figure>
             </div>

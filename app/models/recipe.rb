@@ -1,14 +1,14 @@
 class Recipe < ApplicationRecord
     belongs_to :user
     has_many :comments, dependent: :destroy 
-    attachment :image
-    
+    #ttachment :image
+    has_one_attached :photo
     with_options presence: true do
         validates :title
         validates :body
         validates :bpm
         validates :Genre
-        validates :image
+        #validates :image
     end
     
 end

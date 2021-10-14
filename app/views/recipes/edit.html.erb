@@ -52,7 +52,8 @@
 
           <div class="field">
             <%= f.label :image, "Record Jacket", class: "label" %>
-            <%= f.attachment_field :image, class: "input" %>
+            <%#<%= f.attachment_field :image, class: "input" %>
+            <%= f.file_field :photo %><br>
           </div>
 
             <%= f.submit "投稿", class: "button is-success" %>
