@@ -2,7 +2,7 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title is-size-6">
-            マイページ
+            マイページ</font></strong>
       </h1>
     </div>
   </div>
@@ -15,7 +15,10 @@
         <div class="columns is-centered">
           <div class="column is-4">
             <figure class="image is-128x128"  style="margin-left: auto; margin-right: auto;">
-              <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png", class: "profile_image is-rounded" %>
+              <%#<%= attachment_image_tag @user, :profile_image, fallback: "no-image.png", class: "profile_image is-rounded" %>
+              <% if @user.image.attached? %>
+                <%= image_tag @user.image %>
+              <% end %>
             </figure>
           </div>
           <div class="column is-8">

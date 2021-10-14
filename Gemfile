@@ -13,7 +13,12 @@ end
 # 本番環境ではPostgresqlを使う
 group :production do
   gem 'pg'
+  gem 'rails_12factor', '0.0.2'
+  gem 'fog-aws'
 end
+
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
