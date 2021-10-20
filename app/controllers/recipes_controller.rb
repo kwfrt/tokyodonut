@@ -8,6 +8,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @comments = @recipe.comments
     @comment = current_user.comments.new
+    @user = @comment.user
   end
 
   def new

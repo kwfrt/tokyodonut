@@ -94,7 +94,7 @@
           <article class="media">
             <div class="media-content">
               <div class="content">
-               <p><strong><%= @recipe.user.username %> </strong><br>
+               <p><strong><%= @user.username %> </strong><br>
                   <%= form_for [@recipe, @comment] do |f| %>
                   <div>
                     <%= f.text_area :comment_content %>
@@ -107,7 +107,7 @@
              <h2>コメント一覧</h2>
              <% @comments.each do |comment| %>
              <div>
-             <%= @recipe.user.username %>：<%= comment.comment_content %>
+             <%= comment.user.username %>：<%= comment.comment_content %>
              <hr>
              </div>
              <% end %>
