@@ -6,9 +6,8 @@ class Recipe < ApplicationRecord
     with_options presence: true do
         validates :title
         validates :body
-        validates :bpm
+        #validates :bpm
         validates :Genre
-        #validates :image
     end
     
 end

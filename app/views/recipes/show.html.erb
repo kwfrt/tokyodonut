@@ -61,7 +61,17 @@
                 　<% elsif @recipe.Genre == "4" %>
                 　   <td>R&B</td>  
                 　<% elsif @recipe.Genre == "5" %>
-                　   <td>Citypop</td>  
+                　   <td>Citypop</td> 
+                　<% elsif @recipe.Genre == "6" %>
+                　   <td>Hiphop</td>
+                　<% elsif @recipe.Genre == "7" %>
+                　   <td>Reggae</td>
+                　<% elsif @recipe.Genre == "8" %>
+                　   <td>Jazz</td>
+                　<% elsif @recipe.Genre == "9" %>
+                　   <td>Rock</td>
+                　<% elsif @recipe.Genre == "10" %>
+                　   <td>Other</td>
                 　<% end %>
                 </tr>
               </table>
@@ -75,13 +85,10 @@
       
       <div class="column is-4">
         <article class="panel is-link">
+          <div class="panel panel-success">
           <p class="panel-heading">
             By <%= @recipe.user.username %>
           </p>
-          <div class="panel-block">
-            <p class="control">
-              <%= @recipe.user.profile %>
-            </p>
           </div>
           <%= link_to user_path(@recipe.user), class: "panel-block" do %>
             <span class="panel-icon">

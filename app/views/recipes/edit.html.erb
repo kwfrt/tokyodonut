@@ -1,7 +1,7 @@
-<section class="hero is-success">
+ <section class="hero is-dark is-small">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">
+      <h1 class="title is-size-6">
         レコード編集
       </h1>
     </div>
@@ -46,7 +46,7 @@
           
           <div class="field">
             <%= f.label :Genre, "Genre", class: "label" %>
-            <%= f.select :Genre, {'Soul': 1,'Funk': 2,'Dub': 3,'R&B': 4,'Citypop': 5}, {include_blank: '選択してください'}, { class: 'input' , required: true }%>
+            <%= f.select :Genre, {'Soul': 1,'Funk': 2,'Dance': 3,'R&B': 4,'Citypop': 5,'Hiphop': 6,'Reggae': 7,'Jazz': 8,'Rock': 9,'Other': 10}, {include_blank: '選択してください'}, { class: 'input' , required: true }%>
           </div>
           
 
