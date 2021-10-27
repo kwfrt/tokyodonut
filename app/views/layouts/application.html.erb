@@ -31,7 +31,7 @@
       </div>
 
       <% if user_signed_in? %>
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <%#<div id="navbarExampleTransparentExample" class="navbar-menu"%>
           <div class="navbar-item">
             <%= link_to recipes_path, class: "navbar-item" do %>
               <h1 class="title is-7" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">レコード一覧</h1>
@@ -57,7 +57,7 @@
               </div>
             </div>
           </div>
-        </div>
+        <%#</div%>
       <% else %>
         <div id="navbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
