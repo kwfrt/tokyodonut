@@ -37,8 +37,10 @@
 
       <% if user_signed_in? %>
         <div id="navbarExampleTransparentExample" class="navbar-menu">
-          <div class="navbar-item">
-            <%= link_to "レコード一覧", recipes_path, class: "navbar-item button is-black is-light" %>
+          <div class="navbar-brand">
+            <h1 class="title is-4" style="font-family:Arial,'DotumChe',sans-serif ; color:#f0f8ff;">
+              <%= link_to "レコード一覧", recipes_path, class: "navbar-item button is-black is-light" %>
+            </h1>
           </div>
           <div class="navbar-item">
             <%= link_to "レコード投稿", new_recipe_path, class: "navbar-item button is-black is-light" %>
