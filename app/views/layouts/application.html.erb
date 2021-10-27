@@ -36,15 +36,16 @@
       </div>
 
       <% if user_signed_in? %>
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
-          <div class="navbar-brand">
-            <h1 class="title is-4" style="font-family:Arial,'DotumChe',sans-serif ; color:#f0f8ff;">
-              <%= link_to "レコード一覧", recipes_path, class: "navbar-item button is-black is-light" %>
-            </h1>
+        <%#<div id="navbarExampleTransparentExample" class="navbar-menu"%>
+          <div class="navbar-item">
+            <%= link_to recipes_path, class: "navbar-item" do %>
+              <h1 class="title is-7" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">レコード一覧</h1>
+            <% end %>
           </div>
           <div class="navbar-item">
             <%= link_to "レコード投稿", new_recipe_path, class: "navbar-item button is-black is-light" %>
           </div>
+          
 
           <div class="navbar-end">
             <div class="navbar-item">
