@@ -20,7 +20,7 @@
                                 <%= link_to user_path(user) do %>
                                 <%#<%= attachment_image_tag user, :profile_image, fallback: "no-image.png" %>
                                 <% if user.image.attached? %>
-                                  <%= image_tag user.image %>
+                                      <%= image_tag user.image %>
                                 <% else %>
                                   <%= image_tag "no-image.png" %>
                                 <% end %>

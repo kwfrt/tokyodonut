@@ -84,14 +84,13 @@
         </div>
       </div>
       
-      <div class="column is-4">
+      <div class="column is-3">
+        <h2 style="text-align:center" >投稿者</h2>
+        <%= link_to user_path(@recipe.user), class: "panel-block" do %>
+            <figure class="image is-128x128"  style="margin-left: auto; margin-right: auto;">
+            <%= image_tag @recipe.user.image %>
+            </figure>
         <article class="panel is-link">
-          <div class="panel panel-success">
-          <p class="panel-heading">
-            By <%= @recipe.user.username %>
-          </p>
-          </div>
-          <%= link_to user_path(@recipe.user), class: "panel-block" do %>
             <span class="panel-icon">
               <i class="fas fa-user" aria-hidden="true"></i>
             </span>
