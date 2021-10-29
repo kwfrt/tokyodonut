@@ -1,3 +1,41 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.sp-image-wrap:before {
+    position: absolute;
+    content: '';
+    background-color: #c3c3c3a3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.sp-image-wrap .sp-description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+    overflow-y: scroll;
+    visibility: hidden;
+    z-index: -1;
+    transform: translateY(-10px);
+    transition: transform .3s ease;
+}
+
+.sp-image-wrap:hover img {
+    filter: blur(5px);
+}
+.sp-image-wrap:hover:before {
+    visibility: visible;
+    z-index: 10;
+}
+.sp-image-wrap:hover .sp-description {
+    visibility: visible;
+    z-index: 11;
+    transform: translateY(0px);
+}

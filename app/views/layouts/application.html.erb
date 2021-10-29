@@ -23,10 +23,10 @@
       </div>
     <% end %>
 
-    <nav class="navbar is-black">
+    <nav class="navbar is-black p-5">
       <div class="navbar-brand">
         <%= link_to root_path, class: "navbar-item" do %>
-          <h1 class="title is-5" style="font-family:Arial,'DotumChe',sans-serif ; color:#f0f8ff;">DONUT</h1>
+          <h1 class="title is-2" style="font-family:Arial,'DotumChe',sans-serif ; color:#f0f8ff;">DONUT</h1>
         <% end %>
       </div>
       
@@ -35,19 +35,19 @@
           <div class="navbar-item">
             <div class="field is-grouped">
               <%= link_to recipes_path, class: "navbar-item" do %>
-              <h1 class="title is-7" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">レコード一覧</h1>
+              <h1 class="title is-5" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">レコード一覧</h1>
               <% end %>
               <%= link_to new_recipe_path, class: "navbar-item" do %>
-                <h1 class="title is-7" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">レコード投稿</h1>
+                <h1 class="title is-5" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">レコード投稿</h1>
               <% end %>
               <%= link_to users_path, class: "navbar-item" do %>
-                <h1 class="title is-7" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">DONUT会員一覧</h1>
+                <h1 class="title is-5" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">DONUT会員一覧</h1>
               <% end %>
               <%= link_to user_path(current_user), class: "navbar-item" do %>
-                <h1 class="title is-7" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">マイページ</h1>
+                <h1 class="title is-5" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">マイページ</h1>
               <% end %>
               <%= link_to destroy_user_session_path, method: :delete, class: "navbar-item" do %>
-                <h1 class="title is-7" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">ログアウト</h1>
+                <h1 class="title is-5" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">ログアウト</h1>
               <% end %>
             </div>
           </div>
@@ -57,7 +57,7 @@
           <div class="navbar-item">
             <div class="field is-grouped">
               <%= link_to recipes_path, class: "navbar-item" do %>
-                <h1 class="title is-7" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">レコード一覧</h1>
+                <h1 class="title is-5" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">レコード一覧</h1>
               <% end %>
               <%#= link_to new_user_session_path, class: "navbar-item" do %>
                 <%#h1 class="title is-7" style="font-family:Arial,'DotumChe',sans-serif ; color:#adb5bd;">ログイン</h1>
