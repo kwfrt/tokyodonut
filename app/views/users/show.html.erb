@@ -18,6 +18,8 @@
               <%#<%= attachment_image_tag @user, :profile_image, fallback: "no-image.png", class: "profile_image is-rounded" %>
               <% if @user.image.attached? %>
                 <%= image_tag @user.image %>
+              <% else %>
+                <%= image_tag "no-image.png" %>
               <% end %>
             </figure>
           </div>
