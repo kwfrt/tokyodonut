@@ -10,7 +10,7 @@
 
 <% if @recipe.errors.any? %>
   <div class="notification is-danger">
-    <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
+    <h2><%= pluralize(@recipe.errors.count, "error") %> 発生しました。</h2>
     <ul>
       <% @recipe.errors.full_messages.each do |message| %>
       <li><%= message %></li>
@@ -57,7 +57,6 @@
 
           <div class="field">
             <%= f.label :image, "Record Jacket", class: "label" %>
-            <%#<%= f.attachment_field :image, class: "input" %>
             <%= f.file_field :photo %><br>
           </div>
 

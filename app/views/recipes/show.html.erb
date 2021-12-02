@@ -1,4 +1,4 @@
- <section class="hero is-dark is-small">
+<section class="hero is-dark is-small">
   <div class="hero-body">
     <div class="container">
       <h1 class="title is-size-6">
@@ -14,18 +14,17 @@
       <div class="column is-7">
         <div class="card">
           <div class="card-image">
-          　<%#<%= attachment_image_tag @recipe, :image %>
           　<% if @recipe.photo.attached? %>
               <%= image_tag @recipe.photo %>
             <% end %>
           </div>
           <div class="card-content">
-            <%#<div class="media">%>
-              <div class="media-content">
+            <%#<div class="media">
+              <div class="media-content">%>
                 <p class="title is-4"><%= @recipe.title %></p>
                 <p class="title is-6"><%= @recipe.artist %></p>
-              <%#</div> %>
-            </div>
+          　　<%#　</div>
+            </div>%>
             <div class="content">
               <table class="table is-narrow">
                 <tr>
@@ -35,21 +34,18 @@
                   <td><%= simple_format @recipe.body %></td>
                 </tr>
                 <tr>
-                <br>
                 　<th>Bestsong</th>
                 </tr>
                 <tr>
                   <td><%= simple_format @recipe.bestsong %></td>
                 </tr>
                 <tr>
-                <br>
                 　<th>Bestsong BPM</th>
                 </tr>
                 <tr>
                   <td><%= simple_format @recipe.bpm %></td>
                 </tr>
                 <tr>
-                <br>
                 　<th>Genre</th>
                 </tr>
                 <tr>

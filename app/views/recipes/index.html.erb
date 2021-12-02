@@ -1,4 +1,4 @@
- <section class="hero is-dark is-small">
+<section class="hero is-dark is-small">
   <div class="hero-body">
     <div class="container">
       <h1 class="title is-size-6">
@@ -17,7 +17,6 @@
             <div class="card-image">
               <figure class="image is-4by3">
                 <%= link_to recipe_path(recipe) do %>
-                  <%#<%= attachment_image_tag recipe, :image %>
                   <% if recipe.photo.attached? %>
                     <%= image_tag recipe.photo %>
                   <% end %>
