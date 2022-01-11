@@ -35,13 +35,12 @@
           </div>
           
           <div class="field">
-             <%= f.label :profile, "プロフィール", class: "label" %>
-             <%= f.text_field :profile, class: "textarea" %>
+             <%= f.label :profile, "一言メッセージ", class: "label" %>
+             <%= f.text_field :profile, maxlength: 30, class: "textarea" %>
           </div>
           
           <div class="field">
               <%= f.label :profile_image, "プロフィール画像", class: "label" %>
-              <%#<%= f.attachment_field :profile_image, class: "input" %>
               <%= f.file_field :image %><br>
           </div>
           
